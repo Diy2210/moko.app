@@ -74,7 +74,7 @@ class SharedFactory(
             }
 
             override fun validateLanguage(value: String): StringDesc? {
-                val validValues = listOf("ru", "us")
+                val validValues = listOf("ru", "us", "ua")
                 return if (validValues.contains(value)) {
                     null
                 } else {

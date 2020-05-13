@@ -7,6 +7,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("dev.icerock.mobile.multiplatform-units")
+    id("kotlin-android-extensions")
 }
 
 android {
@@ -27,7 +28,7 @@ android {
         applicationId = "org.example.app"
 
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -61,6 +62,8 @@ dependencies {
     implementation(Deps.Libs.MultiPlatform.napier.android!!)
 
     implementation(project(":mpp-library"))
+    implementation("androidx.appcompat:appcompat:1.1.0")
+    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
 
     // fix of package javax.annotation does not exist import javax.annotation.Generated in DataBinding code
     compileOnly("javax.annotation:jsr250-api:1.0")
